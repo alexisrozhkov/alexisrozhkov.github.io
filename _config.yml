@@ -1,1 +1,63 @@
-theme: jekyll-theme-cayman
+# Site
+title: alexisrozhkov's blog
+url: https://alexisrozhkov.github.io/
+locale: en_US
+
+# Left Block Images
+background:
+  homepage: images/back-home.jpg                # this image will be shown on homepage's left block
+  post-list: images/jason-blackeye-209586.jpg   # Photo by Jason Blackeye on Unsplash
+  default-post: images/ivan-levchenko-47785.jpg # Photo by Ivan Levchenko on Unsplash
+
+# Jekyll
+permalink:          /:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+sass:
+  sass_dir:         assets/_sass
+  style:            compressed
+
+# Google Analytics
+#google-analytics: UA-XXXXX-Y
+
+# Social Links
+#email:             email
+#google.plus:        username
+#twitter:            username
+#facebook:           username
+github:             alexisrozhkov
+stackoverflow:     3896254/alexisrozhkov
+linkedin:          alexisrozhkov
+#xing:              username
+#instagram:          username
+#lastfm:            username
+#tumblr:            username
+#pinterest:         username
+#foursquare:        username
+#steam:              username
+#dribbble:          username
+#youtube:           username
+#soundcloud:        username
+#weibo:             username
+#flickr:            username
+#codepen:           username
+#keybase:           username
+#xmpp:              username@server.com
+#hackernews:        username
+#behance:           username
+
+# Gems
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gist
+
+# Exclude list
+include: [_pages]
+exclude: [README.md, Gemfile, Gemfile.lock, _site, src, vendor, CNAME, LICENSE, Rakefile, .sass-cache, .DS_Store]

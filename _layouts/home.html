@@ -1,0 +1,33 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body id="homepage">
+
+  <div class="block-left">
+    <div class="content">
+      <div class="main-info">
+        <h1>
+          {{ site.title }}
+        </h1>
+        {% include social-links.html %}
+      </div>
+    </div>
+    <canvas></canvas>
+  </div>
+
+  <div class="block-right">
+    <a href="{{ site.url }}/posts" title="posts" class="posts-menu-icon"></a>
+    <span class="posts-link">POSTS</span>
+    <div class="content">
+      <div class="about-info">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  {% include overlay.html %}
+</body>
+</html>
