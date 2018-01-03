@@ -9,9 +9,7 @@ layout: compress
 
     <div class="block-left">
       <div class="content">
-        <a title="Home" href="{{ site.url }}" class="home-menu-icon">
-            <span></span>
-        </a>
+        <a title="Home" href="{{ site.url }}" class="button-home" > <img src="{{ site.url }}/images/home.png"></a>
         <span class="home-link">HOME</span>
         
         <div class="post-title-section">
@@ -33,7 +31,7 @@ layout: compress
       <div class="share-buttons">
         {% include share.html %}
       </div>
-      <a href="../posts.html" title="posts" class="posts-menu-icon"></a>
+      <a title="posts" href="{{ site.url }}/posts.html" class="button-posts" > <img src="{{ site.url }}/images/posts.png"></a>
       <div class="inner-post content">
         <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
         {{ content }}

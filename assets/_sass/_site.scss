@@ -46,43 +46,6 @@ canvas {
   z-index: 0;
 }
 
-.posts-menu-icon {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  width: 20px;
-  height: 25px;
-  border: 2px solid $gray;
-  background: $white;
-  &:before {
-    content: '';
-    width: 20px;
-    height: 25px;
-    position: absolute;
-    right: 2px;
-    border: 2px solid $gray;
-    top: 2px;
-    background: $white;
-  }
-  &:after {
-    content: '';
-    width: 20px;
-    height: 25px;
-    border: 2px solid $gray;
-    position: absolute;
-    right: 6px;
-    top: 6px;
-    background: $white;
-  }
-  &:hover {
-    border-color: $green;
-    &:before,
-    &:after {
-      border-color: $green;
-    }
-  }
-}
-
 .posts-link {
   position: absolute;
   top: 73px;
@@ -94,60 +57,20 @@ canvas {
   right: 30px;
 }
 
-.home-menu-icon {
+.button-posts {
   position: absolute;
-  top: 30px;
-  left: 40px;
-  width: 15px;
-  height: 15px;
-  border: 2px solid $gray;
-  border-radius: 3px;
-  cursor: pointer;
-  z-index: 3;
-  &:before {
-    content: '';
-    position: absolute;
-    left: -19px;
-    top: -2px;
-    width: 15px;
-    height: 15px;
-    border: 2px solid $gray;
-    border-radius: 3px;
-  }
-  span {
-    position: absolute;
-    top: 15px;
-    right: -2px;
-    width: 15px;
-    height: 15px;
-    border: 2px solid $gray;
-    border-radius: 3px;
-    &:before {
-      content: '';
-      position: absolute;
-      left: -19px;
-      top: -2px;
-      width: 15px;
-      height: 15px;
-      border: 2px solid $gray;
-      border-radius: 3px;
-    }
-  }
-  &:hover {
-    border-color: $green;
-    &:before {
-      border-color: $green;
-    }
-    span {
-      border-color: $green;
-      &:before {
-        border-color: $green;
-      }
-    }
-  }
-  &.active {
-    position: fixed;
-  }
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+}
+
+.button-home {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  left: 20px;
 }
 
 .home-link {
@@ -175,18 +98,6 @@ canvas {
   &.show {
     display: block;
   }
-}
-
-.logo {
-  max-width: 150px;
-  display: inline-block;
-  height: auto;
-  background-size: 100%;
-  margin: 0 auto;
-  position: relative;
-  font: 0/0 verdana;
-  color: transparent;
-  text-shadow: none;
 }
 
 .main-info,
@@ -244,7 +155,6 @@ canvas {
       &:before {
         content: "";
         position: absolute;
-        z-index: -1;
         top: 0;
         left: 0;
         right: 0;
@@ -301,6 +211,7 @@ canvas {
 }
 
 .about-info {
+  padding-top: 60px;
   text-align: left;
   h1,
   h2 {
