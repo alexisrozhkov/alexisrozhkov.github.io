@@ -189,6 +189,7 @@ canvas {
       &:before {
         content: "";
         position: absolute;
+        z-index: -1;
         top: 0;
         left: 0;
         right: 0;
@@ -424,6 +425,7 @@ canvas {
 }
 
 .post-title-section {
+  margin-top: 60px;
   position: absolute;
   bottom: 50px;
   left: 50px;

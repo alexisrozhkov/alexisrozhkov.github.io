@@ -28,9 +28,6 @@ layout: compress
     </div>
 
     <div class="block-right">
-      <div class="share-buttons">
-        {% include share.html %}
-      </div>
       <a title="posts" href="{{ site.url }}/posts.html" class="button-posts" > <img src="{{ site.url }}/images/posts.png"></a>
       <div class="inner-post content">
         <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
