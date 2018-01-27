@@ -24,7 +24,7 @@ sass:
   style:            compressed
 
 # Google Analytics
-#google-analytics: UA-XXXXX-Y
+google-analytics: UA-113163166-1
 
 # Social Links
 email:             alexisrozhkov@gmail.com
