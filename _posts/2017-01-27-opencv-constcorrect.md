@@ -20,10 +20,10 @@ On the other hand, employing FP can seem unusual at first and requires certain d
 
 Purity / lack of side effects, which are usually associated with FP, are exciting concepts, but unfortunately they are often impossible or impractical to fully embrace in **real™️** applications, either due to inefficiency or due to hardware/software limitations (API calls which mutate hidden state, etc). But immutability, which is intimately connected with purity, seems to be easier to apply selectively.
 
-Unfortunately, in many languages (C++ in particular) data is mutable by default, so we have to explicitly express our intent to keep particular objects unchanged throughout their lifetime. This practice is often referred to as **const correctness**. Basically you just sprinkle your code with `const`, and maybe even put some effort into making as much objects as possible constant (of course you should try to stay reasonable and find balance in such kind of desicions). Sounds easy, but once you start actually doing it, you end up with following benefits:
+Unfortunately, in many languages (C++ in particular) data is mutable by default, so we have to explicitly express our intent to keep particular objects unchanged throughout their lifetime. This practice is often referred to as **const correctness**. Basically you just sprinkle your code with `const`, and maybe even put some effort into making as much objects as possible constant (of course you should try to stay reasonable and find balance in such kind of decisions). Sounds easy, but once you start actually doing it, you end up with following benefits:
 * catching occasional unintended data mutation (or even worse - logic errors due to insufficient planning)
-* getting rid of race conditions and need of synchronisation (no need to sync state that doesn't change)
-* potentially more optimised code (compiler will have more insight into what's going to happen)
+* getting rid of race conditions and need of synchronization (no need to sync state that doesn't change)
+* potentially more optimized code (compiler will have more insight into what's going to happen)
 * "self-documenting" function signatures (no need to explicitly mark input and output arguments)
 
 Here're some great reads in case you're interested in efficient use of FP in C++, and lets move on:
@@ -78,7 +78,7 @@ int main() {
 
 It's not the first time such behaviour raises eyebrows: [Stack Overflow: Is cv::Mat class flawed by design?](https://stackoverflow.com/questions/13713625/is-cvmat-class-flawed-by-design), but OpenCV dev's responses usually involve straw man "cloning all the way would decrease performance, and that's not what most people want" and suggest explicitly cloning when necessary, seemingly unaware of other possible solutions (providing a Mat class which is essentially immutable, but otherwise compatible with cv::Mat interface). I would argue that abusing language type system can hardly be justified by performance, which would make no sense if it compromises program correctness.
 
-But enough ranting, time to do something about it. Unfortunately, when I became fully aware of this situation with cv::Mat - too much code was influenced, so instead of coming up with something completely new my goal was fixing this behaviour with minimal changes.
+But enough ranting, time to do something about it. Unfortunately, when I became fully aware of this situation with cv::Mat - too much code was influenced, so instead of coming up with something completely new my goal was fixing this behavior with minimal changes.
 
 Core concept was wrapping cv::Mat with a thin wrapper which clones the matrix **both** at construction and at access. Something like that:
 
