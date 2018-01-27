@@ -9,9 +9,6 @@ layout: compress
 
     <div class="block-left">
       <div class="content">
-        <a title="Home" href="{{ site.url }}" class="button-home" > <img src="{{ site.url }}/images/home.png"></a>
-        <span class="home-link">HOME</span>
-        
         <div class="post-title-section">
           <div class="section-line">Posts <em>/</em></div>
           <h1 class="section-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
@@ -28,7 +25,11 @@ layout: compress
     </div>
 
     <div class="block-right">
+      <a title="Home" href="{{ site.url }}" class="button-home" > <img src="{{ site.url }}/images/home.png"></a>
+      <span class="home-link">HOME</span>
+        
       <a title="posts" href="{{ site.url }}/posts.html" class="button-posts" > <img src="{{ site.url }}/images/posts.png"></a>
+      <span class="posts-link">POSTS</span>
       <div class="inner-post content">
         <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
         {{ content }}

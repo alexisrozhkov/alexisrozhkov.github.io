@@ -9,16 +9,15 @@ layout: compress
 
     <div class="block-left">
       <div class="content">
-        <a title="Home" href="{{ site.url }}" class="button-home" > <img src="{{ site.url }}/images/home.png"></a>
-        <span class="home-link">HOME</span>
-        
         <h1 class="section-title">{{ page.title}}<em>/</em>
         </h1>
       </div>
     </div>
 
     <div class="block-right">
-      <a title="posts" href="{{ site.url }}/posts" class="button-posts" > <img src="{{ site.url }}/images/posts.png"></a>
+    <a title="Home" href="{{ site.url }}" class="button-home" > <img src="{{ site.url }}/images/home.png"></a>
+        <span class="home-link">HOME</span>
+        
       <div class="content">
         <ul class="posts-list">
         {% for post in site.posts %}
