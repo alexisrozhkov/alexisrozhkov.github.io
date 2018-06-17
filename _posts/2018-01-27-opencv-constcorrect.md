@@ -41,8 +41,8 @@ I would say that this approach is an abuse of a type system, and that it adds a 
 ```c++
 #include <opencv2/opencv.hpp>
 
-// developer which has access only to a header 
-// might think that cv::Mat outer won't be changed.
+// developer who has access only to a header 
+// might think that `outer` won't be changed.
 void corrupt(const cv::Mat &outer) {
   // you'd expect a copy here after which inner would be decoupled from outer
   // (unless you're an opencv developer).
@@ -53,8 +53,8 @@ void corrupt(const cv::Mat &outer) {
   // safe way to write this would be to clone outer to get inner above,
   // but it incurs performance penalty which it not necessary if outer
   // is a temporary object.
-  // developer which works on this function has no way of knowing 
-  // whether user of this function intends to use outer after calling it.
+  // developer who works on this function has no way of knowing 
+  // whether user of this function intends to use `outer` after calling it.
   inner = cv::Scalar(0, 0, 0);
 }
 
