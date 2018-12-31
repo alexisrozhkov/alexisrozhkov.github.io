@@ -7,6 +7,6 @@ I'm a computer vision engineer from St. Petersburg, Russia. I'm interested in AI
 
 I studied Computer Photonics (which is a mix of computer science and physics) at [ITMO university](http://en.ifmo.ru/en/), and worked at LG Russia R&D Lab as a research engineer on various projects after completing my Master's degree.
 
-Now I work at [mati](http://mati.io/), which will streamline online shopping experience by providing secure biometric identity for customers. 
+Now I work on Computer Vision at [mati](http://getmati.com/), which allows instant user identity verification online. 
 
 Here I will post things I find worth sharing/discussing, hopefully someone might find it useful.
